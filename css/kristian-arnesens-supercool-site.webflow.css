@@ -431,6 +431,14 @@ blockquote {
   font-style: italic;
 }
 
+.button.button-4.forside-fb-knapp {
+  border-color: hsla(0, 0%, 100%, 0.74);
+}
+
+.button.button-4 {
+  border-color: hsla(0, 0%, 100%, 0.74);
+}
+
 .button-2 {
   border: 1px solid #888;
   border-radius: 0px;
@@ -441,7 +449,7 @@ blockquote {
   margin-left: 20px;
   border-style: solid;
   border-width: 1px;
-  border-color: #fff;
+  border-color: hsla(0, 0%, 100%, 0.74);
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -495,6 +503,11 @@ blockquote {
     width: 100%;
     padding-right: 0px;
     padding-left: 0px;
+  }
+
+  .icon {
+    padding-bottom: 0px;
+    font-size: 40px;
   }
 }
 
@@ -561,8 +574,22 @@ blockquote {
     display: flex;
   }
 
+  .hamburger-button:active {
+    background-color: transparent;
+    color: hsla(0, 0%, 100%, 0.74);
+  }
+
   .brand-text {
-    max-width: 70vw;
+    width: auto;
+    max-width: 60%;
+  }
+
+  .brand-link {
+    max-width: 60%;
+  }
+
+  .brand-link.w--current {
+    max-width: 60%;
   }
 
   .footer {
@@ -644,6 +671,11 @@ blockquote {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+  }
+
+  .icon {
+    margin-right: 20px;
+    font-size: 50px;
   }
 }
 
