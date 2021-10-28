@@ -1,5 +1,5 @@
 # galleri-saevik
 
-Nettside for kunstner Hans Lennart Sævik.
+Nettside for kunstner Hans Lennert Sævik.
 
 www.gallerisævik.no
