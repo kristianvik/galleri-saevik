@@ -44,6 +44,7 @@
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -1826,9 +1827,9 @@ textarea.w-select {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 199;
   /* Sit on top */
-  padding-top: 250px;
+  padding-top: 50px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -1848,7 +1849,7 @@ textarea.w-select {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 
@@ -1869,7 +1870,7 @@ textarea.w-select {
 
 .close {
   position: absolute;
-  top: 200px;
+  top: 50px;
   right: 35px;
   color: #f1f1f1;
   font-size: 40px;

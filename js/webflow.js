@@ -18869,41 +18869,56 @@ Webflow.require('ix2').init(
 );
 
 // MODAL CODE
-// create references to the modal...
-var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-var images = document.getElementsByClassName('myImages');
-// the image in the modal
-var modalImg = document.getElementById("img01");
-// and the caption in the modal
-var captionText = document.getElementById("caption");
 
-// Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function(evt) {
-    console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    console.log(this);
+var deviceWidth = window.innerWidth;
+console.log(deviceWidth);
+
+if(deviceWidth>800){
+    // create references to the modal...
+  var modal = document.getElementById('myModal');
+  // to all images -- note I'm using a class!
+  var images = document.getElementsByClassName('myImages');
+  // the image in the modal
+  var modalImg = document.getElementById("img01");
+  // and the caption in the modal
+  var captionText = document.getElementById("caption");
+
+  // Go through all of the images with our custom class
+  for (var i = 0; i < images.length; i++) {
+    var img = images[i];
+    // and attach our click listener for this image.
+    img.onclick = function(evt) {
+      console.log(evt);
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      console.log(this);
+    }
   }
-}
-document.onkeydown = function(evt) {
-  evt = evt || window.event;
-  var isEscape = false;
-  if ("key" in evt) {
-      isEscape = (evt.key === "Escape" || evt.key === "Esc");
-  } else {
-      isEscape = (evt.keyCode === 27);
-  }
-  if (isEscape) {
-      modal.style.display = "none";
+  document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+        modal.style.display = "none";
+    }
+  };
+
+  var modalSpan = document.getElementsByClassName("close")[0];
+
+  modalSpan.onclick = function() {
+    modal.style.display = "none";
   }
 };
 
-var modalSpan = document.getElementsByClassName("close")[0];
+if(deviceWidth<800){
+  var smoothlinks = document.getElementsByClassName('photo-link-block');
+  for (var i = 0; i < smoothlinks.length; i++) {
+    var link = smoothlinks[i];
+    link.href = "#";
+  }
+};
 
-modalSpan.onclick = function() {
-  modal.style.display = "none";
-}
