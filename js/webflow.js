@@ -485,47 +485,7 @@ Webflow.require = function (name) {
   return modules[name];
 };
 
-// MODAL CODE
 
-// create references to the modal...
-console.log("hei!");
-var modal = document.getElementById('myModal');
-// to all images -- note I'm using a class!
-var images = document.getElementsByClassName('myImages');
-// the image in the modal
-var modalImg = document.getElementById("img01");
-// and the caption in the modal
-var captionText = document.getElementById("caption");
-
-// Go through all of the images with our custom class
-for (var i = 0; i < images.length; i++) {
-  var img = images[i];
-  // and attach our click listener for this image.
-  img.onclick = function(evt) {
-    console.log(evt);
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    console.log(this);
-  }
-}
-document.onkeydown = function(evt) {
-  evt = evt || window.event;
-  var isEscape = false;
-  if ("key" in evt) {
-      isEscape = (evt.key === "Escape" || evt.key === "Esc");
-  } else {
-      isEscape = (evt.keyCode === 27);
-  }
-  if (isEscape) {
-      modal.style.display = "none";
-  }
-};
-
-var span = document.getElementsByClassName("close")[0];
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
 
 function bindModule(module) {
   // If running in Webflow app, subscribe to design/preview events
@@ -18897,6 +18857,8 @@ Webflow.define('navbar', module.exports = function ($, _) {
   return api;
 });
 
+
+
 /***/ })
 /******/ ]);/**
  * ----------------------------------------------------------------------
@@ -18905,3 +18867,43 @@ Webflow.define('navbar', module.exports = function ($, _) {
 Webflow.require('ix2').init(
 {"events":{"e-3":{"id":"e-3","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-4"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6176cd8d26c842cf38379faf|dffe800f-c9b8-ebf3-4cc5-1fbe0707898b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c842cf38379faf|dffe800f-c9b8-ebf3-4cc5-1fbe0707898b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":null,"effectIn":true},"createdOn":1635352610195},"e-5":{"id":"e-5","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-6"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6176cd8d26c8426024379fb3|1d13f200-3d47-5da9-5593-59c2b2eb6668","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|1d13f200-3d47-5da9-5593-59c2b2eb6668","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":null,"effectIn":true},"createdOn":1635363898230},"e-7":{"id":"e-7","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-8"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6176cd8d26c8426024379fb3|efd05853-e67e-0109-f3e2-a7cbe4bb25d5","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|efd05853-e67e-0109-f3e2-a7cbe4bb25d5","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":null,"effectIn":true},"createdOn":1635363943276},"e-9":{"id":"e-9","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-10"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|b627d933-3e8e-4315-353a-9be53bfcdd0b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|b627d933-3e8e-4315-353a-9be53bfcdd0b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":null,"effectIn":true},"createdOn":1635363956370},"e-11":{"id":"e-11","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-12"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|2eb8f7d7-ef02-17a1-2e49-e98f313a7bc8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|2eb8f7d7-ef02-17a1-2e49-e98f313a7bc8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":600,"direction":null,"effectIn":true},"createdOn":1635363973525},"e-13":{"id":"e-13","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-14"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|f5eb002f-4e2d-5753-250a-7fca9b7a3b18","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|f5eb002f-4e2d-5753-250a-7fca9b7a3b18","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":600,"direction":null,"effectIn":true},"createdOn":1635363982824},"e-15":{"id":"e-15","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-16"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|8c6da25b-d644-0fb9-839b-854db8295044","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|8c6da25b-d644-0fb9-839b-854db8295044","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":900,"direction":null,"effectIn":true},"createdOn":1635363992061},"e-18":{"id":"e-18","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-19"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|cd9ddd1b-9409-7b44-b5a1-eb6727308afb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|cd9ddd1b-9409-7b44-b5a1-eb6727308afb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":900,"direction":null,"effectIn":true},"createdOn":1635364003070},"e-20":{"id":"e-20","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-21"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6176cd8d26c842cf38379faf|7a8850a9-df16-95db-3a41-89ef258574bd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c842cf38379faf|7a8850a9-df16-95db-3a41-89ef258574bd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":null,"effectIn":true},"createdOn":1635364202138},"e-25":{"id":"e-25","name":"","animationType":"preset","eventTypeId":"SCROLL_OUT_OF_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-24"}},"mediaQueries":["main","medium"],"target":{"id":"6176cd8d26c8426024379fb3|ed30245c-7f4e-a9c8-5883-c50863825e34","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|ed30245c-7f4e-a9c8-5883-c50863825e34","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":600,"direction":null,"effectIn":true},"createdOn":1635366690137},"e-26":{"id":"e-26","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-27"}},"mediaQueries":["main","medium","small"],"target":{"id":"6176cd8d26c8426024379fb3|74092e2b-bd72-01ab-ba71-f98a9b5ddadf","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6176cd8d26c8426024379fb3|74092e2b-bd72-01ab-ba71-f98a9b5ddadf","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":600,"direction":null,"effectIn":true},"createdOn":1635366861118}},"actionLists":{"fadeIn":{"id":"fadeIn","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}
 );
+
+// MODAL CODE
+// create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    console.log(evt);
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    console.log(this);
+  }
+}
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  var isEscape = false;
+  if ("key" in evt) {
+      isEscape = (evt.key === "Escape" || evt.key === "Esc");
+  } else {
+      isEscape = (evt.keyCode === 27);
+  }
+  if (isEscape) {
+      modal.style.display = "none";
+  }
+};
+
+var modalSpan = document.getElementsByClassName("close")[0];
+
+modalSpan.onclick = function() {
+  modal.style.display = "none";
+}
