@@ -1885,6 +1885,10 @@ textarea.w-select {
 }
 
 @media only screen and (max-width: 700px) {
+  .modal {
+    padding-top: 100px;
+  }
+
   .close {
     right: 10px;
   }
