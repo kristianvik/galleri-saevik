@@ -1856,15 +1856,15 @@ textarea.w-select {
 .modal-content,
 #caption {
   animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
 }
 
 @keyframes zoom {
   from {
-    transform: scale(0)
+    opacity: 0;
   }
   to {
-    transform: scale(1)
+    opacity: 100;
   }
 }
 
