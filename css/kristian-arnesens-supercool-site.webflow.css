@@ -96,7 +96,7 @@ blockquote {
 }
 
 .navigation-bar {
-  z-index: -1;
+  z-index: 100;
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #0f0f0f;
@@ -429,14 +429,21 @@ blockquote {
 
 .button.button-4:hover {
   color: #fff;
-  font-style: italic;
+  border-color: lightskyblue;
 }
 
 .button.button-4.forside-fb-knapp {
+  transition: 0.5s;
   border-color: hsla(0, 0%, 100%, 0.74);
 }
 
+.button.button-4.forside-fb-knapp:hover {
+  border-color: lightskyblue;
+}
+
+
 .button.button-4 {
+  transition: 0.5s;
   border-color: hsla(0, 0%, 100%, 0.74);
 }
 
@@ -452,11 +459,12 @@ blockquote {
   border-width: 1px;
   border-color: hsla(0, 0%, 100%, 0.74);
   background-color: rgba(255, 255, 255, 0);
+  transition: 0.5s;
 }
 
 .button-3:hover {
   color: #fff;
-  font-style: italic;
+  border-color: lightskyblue;
 }
 
 .body-3 {
@@ -647,7 +655,6 @@ blockquote {
   }
 
   .container-2 {
-    z-index: 0;
     display: block;
   }
 
