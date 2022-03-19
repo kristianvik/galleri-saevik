@@ -96,6 +96,7 @@ blockquote {
 }
 
 .navigation-bar {
+  z-index: -1;
   padding-top: 70px;
   padding-bottom: 70px;
   background-color: #0f0f0f;
@@ -646,6 +647,7 @@ blockquote {
   }
 
   .container-2 {
+    z-index: 0;
     display: block;
   }
 
