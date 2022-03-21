@@ -18889,7 +18889,8 @@ if(deviceWidth>800){
     // and attach our click listener for this image.
     img.onclick = function(evt) {
       console.log(evt);
-      modal.style.display = "block";
+      modal.style.display = "flex";
+      modal.style.justifyContent = "center";
       modalImg.src = this.src;
       console.log(this);
     }
