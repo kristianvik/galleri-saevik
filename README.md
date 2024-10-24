@@ -6,7 +6,6 @@ Bygd med en kombinasjon av Webflow og egen kode.
 www.gallerisævik.no
 
 TODO:
-Mosaikk layout
+Mosaikk layout (vernter på at masonry grid blir implementert i browsers)
 Ny font
-Komprimere bilder
 Gjøre siden penere
